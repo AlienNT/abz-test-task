@@ -5,9 +5,9 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vite.dev/config/
 export default defineConfig(({ command, mode }) => {
-  const { VITE_IS_DEPLOYED_ON_GITHUB } = loadEnv(mode, process.cwd())
+  const { VITE_BASE_URL } = loadEnv(mode, process.cwd())
   const base =
-    command === 'build' && VITE_IS_DEPLOYED_ON_GITHUB === 'true' ? '/abz-test-task/' : '/'
+    command === 'build' && !VITE_BASE_URL ?  '/abz-test-task/' : VITE_BASE_URL
 
   console.log({ base, mode, command })
 
