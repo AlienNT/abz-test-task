@@ -1,1 +1,22 @@
 @use "fonts";
+@use "normalize";
+@use "flex-grid";
+@use "variables/media";
+
+* {
+  @extend .font-main
+}
+:root {
+  background: rgb(229, 229, 229);
+}
+:root, body, #app {
+  min-height: var(--height);
+  transition: all .2s ease;
+}
+#app {
+  display: flex;
+  flex-direction: column;
+}
+.user-field, .user-field a {
+  color: rgba(0, 0, 0, 0.87);
+}
