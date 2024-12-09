@@ -1,0 +1,3 @@
+@function columnSize($columns, $gap) {
+  @return calc((100% - ($gap * ($columns - 1))) / $columns);
+}
