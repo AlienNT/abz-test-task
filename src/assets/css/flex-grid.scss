@@ -1,0 +1,24 @@
+@use "variables/media";
+
+.flex-grid-paddings {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container {
+  @extend .flex-grid-paddings;
+  max-width: media.$container;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  @extend .flex-grid-paddings;
+}
